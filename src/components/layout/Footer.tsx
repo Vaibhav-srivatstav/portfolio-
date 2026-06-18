@@ -118,6 +118,7 @@ const Footer = () => {
                             {new Date().toLocaleTimeString("en-IN", {
                                 hour: "2-digit",
                                 minute: "2-digit",
+                                 timeZone: "Asia/Kolkata",
                             })}
                         </span>
                     </div>
