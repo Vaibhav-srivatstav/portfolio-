@@ -9,50 +9,35 @@ import {
 const Hero = () => {
   return (
     <section className="font-nav">
-      <div
-        className="
-          mx-auto
-          max-w-7xl
-          px-4
-          py-8
-          flex
-          flex-col
-          items-center
-          gap-6
-          text-center
-
-          lg:flex-row
-          lg:justify-between
-          lg:text-left
-        "
-      >
+      <div className="mx-auto max-w-7xl px-4 py-12 flex flex-col items-center gap-12 lg:flex-row lg:justify-between lg:text-left">
+        
         {/* Text Content */}
-        <div className="flex flex-col gap-4 max-w-xl">
-          <h1 className="text-3xl font-bold sm:text-4xl md:text-5xl">
+        <div className="flex flex-col gap-6 max-w-2xl w-full text-center lg:text-left items-center lg:items-start">
+          <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl tracking-tight">
             I AM A SOFTWARE DEVELOPER
           </h1>
-          <TypingText />
+          
+          {/* Min-height prevents layout jump */}
+          <div className="min-h-[80px] flex items-center justify-center lg:justify-start">
+            <TypingText />
+          </div>
 
-          <p className="text-base sm:text-lg md:text-xl">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-lg">
             I ENJOY EXPLORING IDEAS THAT CONNECT DESIGN, TECHNOLOGY,
             AND INNOVATION TO SOLVE REAL-WORLD PROBLEMS.
           </p>
         </div>
 
-        {/* Image */}
-        <CardContainer className="inter-var">
-          <CardBody className="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[500px] lg:h-[500px]">
-            <CardItem
-              translateZ={200}
-              className="w-full h-full"
-            >
+        {/* Image Container */}
+        <CardContainer className="inter-var w-full max-w-md lg:max-w-lg">
+          <CardBody className="w-full aspect-square relative">
+            <CardItem translateZ={200} className="w-full h-full">
               <Image
                 src="/hero.jpeg"
                 alt="Vaibhav Srivastava"
-                width={500}
-                height={500}
+                fill
                 priority
-                className="w-full h-full rounded-2xl object-cover shadow-2xl"
+                className="rounded-2xl object-cover shadow-2xl"
               />
             </CardItem>
           </CardBody>

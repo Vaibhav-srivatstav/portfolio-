@@ -7,8 +7,7 @@ const texts = [
   "class public Vaibhav{}",
   "def Vaibhav():",
   "String name = 'Vaibhav'",
-  "public static void Vaibhav(int a){}",
-  "CREATE OR REPLACE FUNCTION get_vaibhav_id() RETURNS void AS...",
+  "public static Vaibhav(){}"
 ];
 
 export default function TypingText() {
@@ -50,9 +49,9 @@ export default function TypingText() {
   }, [text, isDeleting, index]);
 
   return (
-    <h1 className="text-4xl font-mono font-bold">
+    <h1 className="text-2xl sm:text-3xl md:text-4xl font-nav font-bold break-all">
       {text}
-      <span className="animate-ping ml-1">|</span>
+      <span className="animate-pulse ml-1 opacity-70">|</span>
     </h1>
   );
 }
